@@ -10,7 +10,7 @@ button1.addEventListener("click", function() {
     var INTERET = document.getElementById('nb2').value;
     var DUREE = document.getElementById('nb3').value;
     var MFINAL = document.getElementById('nb4').value;
-    document.getElementById('nb1').value=(MFINAL/Math.pow(1+INTERET/100,DUREE));
+    document.getElementById('nb1').value=(MFINAL/Math.pow(1+INTERET/100,DUREE)).toFixed(2);
     document.getElementById('nb1').style.backgroundColor="lightgreen";
     document.getElementById('nb2').style.backgroundColor="white";
     document.getElementById('nb3').style.backgroundColor="white";
@@ -23,7 +23,7 @@ button2.addEventListener("click", function() {
       //var INTERET = document.getElementById('nb2').value;
       var DUREE = document.getElementById('nb3').value;
       var MFINAL = document.getElementById('nb4').value;
-      document.getElementById('nb2').value=(Math.pow(MFINAL/MI,1/DUREE)-1)*100;
+      document.getElementById('nb2').value=((Math.pow(MFINAL/MI,1/DUREE)-1)*100).toFixed(2);
       document.getElementById('nb1').style.backgroundColor="white";
       document.getElementById('nb2').style.backgroundColor="lightgreen";
       document.getElementById('nb3').style.backgroundColor="white";
@@ -35,7 +35,7 @@ button3.addEventListener("click", function() {
       var INTERET = document.getElementById('nb2').value;
       //var DUREE = document.getElementById('nb3').value;
       var MFINAL = document.getElementById('nb4').value;
-      document.getElementById('nb3').value=(Math.log(MFINAL/MI)/Math.log(1+INTERET/100));
+      document.getElementById('nb3').value=(Math.log(MFINAL/MI)/Math.log(1+INTERET/100)).toFixed(2);
       document.getElementById('nb1').style.backgroundColor="white";
       document.getElementById('nb2').style.backgroundColor="white";
       document.getElementById('nb3').style.backgroundColor="lightgreen";
@@ -47,7 +47,7 @@ button4.addEventListener("click", function() {
       var INTERET = document.getElementById('nb2').value;
       var DUREE = document.getElementById('nb3').value;
       //var MFINAL = document.getElementById('nb4').value;
-      document.getElementById('nb4').value=MI*Math.pow(1+INTERET/100,DUREE);
+      document.getElementById('nb4').value=(MI*Math.pow(1+INTERET/100,DUREE)).toFixed(2);
       document.getElementById('nb1').style.backgroundColor="white";
       document.getElementById('nb2').style.backgroundColor="white";
       document.getElementById('nb3').style.backgroundColor="white";
